@@ -29,3 +29,16 @@
         </g>
     </svg>
 </div>
+<div class="container container-distance">
+    <div class="row">
+        <div class="col heading d-flex justify-content-center">
+            <strong>Admin</strong>
+        </div>
+    </div><br>
+    <div class="row">
+        <div class="col-sm-3 d-flex justify-content-center" *ngFor="let box of Admin,let i = index">
+            <app-winner [user] ="{imageAddress: box.imageAddress
+            ,name: box.firstName,rank:i+1}">
+        </app-winner></div>
+    </div>
+</div>

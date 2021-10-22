@@ -11,5 +11,21 @@ export class AboutPageComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  Admin=[{
+    firstName:"Shivam",
+    imageAddress:"assets/Images & license/Main Logo/icon.png"
+  },
+  {
+    firstName:"Manan",
+    imageAddress:"assets/Images & license/Main Logo/icon.png"
+  },
+  {
+    firstName:"Shubham",
+    imageAddress:"assets/Images & license/Main Logo/icon.png"
+  },
+  {
+    firstName:"Shivam Sai",
+    imageAddress:"assets/Images & license/Main Logo/icon.png"
+  }]
 
 }
