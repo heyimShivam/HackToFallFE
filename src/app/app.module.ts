@@ -10,6 +10,7 @@ import { ErrorPageComponent } from './error-page/error-page.component';
 import { AboutPageComponent } from './about-page/about-page.component';
 import { VisionPageComponent } from './vision-page/vision-page.component';
 import { PrizeComponent } from './prize/prize.component';
+import { MainComponent } from './main/main.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { PrizeComponent } from './prize/prize.component';
     ErrorPageComponent,
     AboutPageComponent,
     VisionPageComponent,
-    PrizeComponent
+    PrizeComponent,
+    MainComponent
   ],
   imports: [
     BrowserModule,
