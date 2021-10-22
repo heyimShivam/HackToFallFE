@@ -35,8 +35,8 @@ ul li{
 }
 
 ul li a:hover {
-    color:orangered;
+    color:orange;
 }
 .active-link{
-  color:orange;
+  color:orangered;
 }
