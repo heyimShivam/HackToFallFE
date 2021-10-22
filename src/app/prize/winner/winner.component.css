@@ -1,0 +1,9 @@
+.winner-position{
+  color: goldenrod;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: white;
+  font-size: 90px;
+  bottom: 20px;
+  right:30px;
+  position: absolute;
+}

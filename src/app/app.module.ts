@@ -11,6 +11,8 @@ import { AboutPageComponent } from './about-page/about-page.component';
 import { VisionPageComponent } from './vision-page/vision-page.component';
 import { PrizeComponent } from './prize/prize.component';
 import { MainComponent } from './main/main.component';
+import { WinnerComponent } from './prize/winner/winner.component';
+
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { MainComponent } from './main/main.component';
     AboutPageComponent,
     VisionPageComponent,
     PrizeComponent,
-    MainComponent
+    MainComponent,
+    WinnerComponent,
+
   ],
   imports: [
     BrowserModule,

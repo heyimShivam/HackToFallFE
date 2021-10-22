@@ -12,8 +12,6 @@ export class NavBarComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    console.log(this.router.url)
-    console.log(window.location.href)
   }
 
 }
