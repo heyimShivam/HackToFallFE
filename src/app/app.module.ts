@@ -12,6 +12,10 @@ import { VisionPageComponent } from './vision-page/vision-page.component';
 import { PrizeComponent } from './prize/prize.component';
 import { MainComponent } from './main/main.component';
 import { WinnerComponent } from './prize/winner/winner.component';
+import { MessageComponent } from './main/message/message.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { TemplateComponent } from './main/message/template/template.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -26,11 +30,15 @@ import { WinnerComponent } from './prize/winner/winner.component';
     PrizeComponent,
     MainComponent,
     WinnerComponent,
+    MessageComponent,
+    TemplateComponent,
 
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

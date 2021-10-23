@@ -32,6 +32,15 @@
 </div>
 <div class="container container-distance">
     <div class="row">
-        <div class="col d-flex justify-content-center"><div class="heading"><strong>Live Updates</strong></div></div>
+        <div class="col d-flex justify-content-center"><div class="heading"><strong>Live Updates</strong><button (click)="openMessage()" style="margin-left: 15px;" class="btn btn-success"> Open </button></div></div>
+        
     </div>
+</div>
+<!-- Main coding Starts Here -->
+<div class="container">
+  <div class="row">
+      <div class="col">
+          <app-message *ngIf="bool" (newItemEvent)="boolupdate()" ></app-message>
+      </div>
+  </div>
 </div>

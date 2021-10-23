@@ -1,0 +1,29 @@
+<div class="container message-box">
+    <div class="row">
+        <div class="col">
+            <div class="message-area">
+                <div class="message-content" *ngFor="let box of userMessage">
+                 <app-template [userMessage]="{name:box.name, image:box.img,time:box.time,planting:box.deleting,id:box.id}"></app-template>
+               </div>
+            </div>
+
+            <div class="messageFoot">
+                <div class="row d-flex justify-content-around">
+                    <div class="col d-flex justify-content-around" style="padding-left: 35px; padding-right: 35px;">
+                        <input type="text" class="message-form" placeholder="Type User name eg: @shivam" name="message">
+                        <span
+                            style="margin-left:5px; margin-right: 5px;background-color: white; padding: 0; border-radius: 10px;">
+                            <img src="assets/Images & license/outline_image_black_24dp.png">
+                        </span>
+                        <button class="btn btn-primary" style="width:20%; margin-right:5px">
+                            Send
+                        </button>
+                        <button class="btn btn-danger" (click)="close()" style="width:20%">
+                            Close
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

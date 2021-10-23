@@ -35,8 +35,8 @@
             <strong>Admin</strong>
         </div>
     </div><br>
-    <div class="row">
-        <div class="col-sm-3 d-flex justify-content-center" *ngFor="let box of Admin,let i = index">
+    <div class="row d-flex justify-content-center m-5">
+        <div class="col-sm-3 " *ngFor="let box of Admin,let i = index">
             <app-winner [user] ="{imageAddress: box.imageAddress
             ,name: box.firstName,rank:i+1}">
         </app-winner></div>

@@ -1,0 +1,11 @@
+
+<div class="row" style="padding-bottom: 25px;">
+
+        <div class="cont d-flex justify-content-around" style="display: flex;" >
+            <h3 class="userName" style="margin-top: auto;margin-bottom: auto;">{{userMessage.name}}</h3>
+            <img src="{{userMessage.image}}" width="30%" style="border:1px solid black">
+            <br>
+            eor
+        </div>
+        <button *ngIf="userMessage.planting" (click)="checkPointAvailable(userMessage.id)" style="width:30%; border-radius: 10px;" class="btn btn-success">Plant One For Me</button>
+</div>

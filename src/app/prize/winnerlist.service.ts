@@ -1,50 +1,52 @@
-import { Injectable } from '@angular/core';
+import { Injectable, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
-export class WinnerlistService {
+export class WinnerlistService implements OnInit{
+  
+  constructor(
+    private http:HttpClient
+  ) {
+    this.fetch();
+   }
+  fetch(){
+    this.http.get('http://localhost:4000/all-user-data-get', {responseType: 'json'}).toPromise().then(
+      data =>{
+      this.userMessage=data;
+      },
+      error=>{
+        console.log(error)
+      }
+    )
+  }
+  userMessage:any;
+  ngOnInit(){
+    this.fetch();
+  }
 
-  constructor() { }
-   topWinners=[
-    {
-      imageAddress:"assets/Images & license/Main Logo/icon.png",
-      firstName:"shivam",
-      lastName:"Dogra",
-      credit:1
-    },
-    {
-      imageAddress:"assets/Images & license/Main Logo/icon.png",
-      firstName:"rakesh",
-      lastName:"Dogra",
-      credit:2
-    },
-    {
-      imageAddress:"assets/Images & license/Main Logo/icon.png",
-      firstName:"shivam",
-      lastName:"Dogra",
-      credit:3
-    },
-    {
-      imageAddress:"assets/Images & license/Main Logo/icon.png",
-      firstName:"rakesh",
-      lastName:"Dogra",
-      credit:4
-    },
-    {
-      imageAddress:"assets/Images & license/Main Logo/icon.png",
-      firstName:"shivam",
-      lastName:"Dogra",
-      credit:5
-    },
-    {
-      imageAddress:"assets/Images & license/Main Logo/icon.png",
-      firstName:"rakesh",
-      lastName:"Dogra",
-      credit:6
-    }
-  ]
+  value=[200,300,400];
+  
   getWinners():any{
-    return this.topWinners;
+      this.ngOnInit();
+
+      setTimeout(() => {
+        let short=this.userMessage.length;
+      for (let i = 0; i < short; i++) {   
+        for (let j = i+1; j < short; j++) {   
+           if(this.userMessage[i].credit < this.userMessage[j].credit) {  
+               let temp = this.userMessage[i];  
+               this.userMessage[i] = this.userMessage[j];  
+               this.userMessage[j] = temp;  
+           }   
+        }   
+    } 
+  },2500);
+  }
+  update():any{
+
+      return this.http.get('http://localhost:4000/all-user-data-get', {responseType: 'json'});
+
   }
 }

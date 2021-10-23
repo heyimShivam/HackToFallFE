@@ -6,10 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main.component.css']
 })
 export class MainComponent implements OnInit {
-
+  bool=false;
   constructor() { }
 
   ngOnInit(): void {
   }
-
+  openMessage(){
+    this.bool=true;
+  }
+  boolupdate(){
+    this.bool=false;
+  }
 }

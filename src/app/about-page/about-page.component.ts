@@ -16,15 +16,7 @@ export class AboutPageComponent implements OnInit {
     imageAddress:"assets/Images & license/Main Logo/icon.png"
   },
   {
-    firstName:"Manan",
-    imageAddress:"assets/Images & license/Main Logo/icon.png"
-  },
-  {
     firstName:"Shubham",
-    imageAddress:"assets/Images & license/Main Logo/icon.png"
-  },
-  {
-    firstName:"Shivam Sai",
     imageAddress:"assets/Images & license/Main Logo/icon.png"
   }]
 

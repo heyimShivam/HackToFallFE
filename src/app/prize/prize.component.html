@@ -48,8 +48,8 @@
     </div>
     <div class="row"> 
             <div class="col-sm-3 d-flex justify-content-center" *ngFor="let box of topWinners,let i = index">
-                <app-winner [user] ="{imageAddress: box.imageAddress
-                ,name: box.firstName,rank:i+1}">
+                <app-winner [user] ="{imageAddress: box.img
+                ,name: box.name,rank:i+1}">
             </app-winner></div>
     </div>
 </div>
